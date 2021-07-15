@@ -1,1 +1,1 @@
-# kubernetes-images
+# images
