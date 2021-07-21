@@ -1,7 +1,7 @@
 FROM nginx:1.20.1-alpine
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY ssl/ /etc/nginx/ssl/
+COPY ssl /etc/nginx/ssl
 COPY default_403.conf /etc/nginx/conf.d/default_403.conf
 COPY proxy.conf /etc/nginx/proxy.conf
 
