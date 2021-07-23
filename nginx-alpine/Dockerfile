@@ -7,8 +7,7 @@ COPY proxy.conf /etc/nginx/proxy.conf
 
 ENV TZ Asia/Shanghai
 
-RUN echo "https://mirrors.aliyun.com/alpine/v3.13/main/" > /etc/apk/repositories \
-	&& echo "https://mirrors.aliyun.com/alpine/v3.13/community/" >> /etc/apk/repositories \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
 	&& apk add --no-cache tzdata \
 	&& cp /usr/share/zoneinfo/${TZ} /etc/localtime \
 	&& echo ${TZ} > /etc/timezone \

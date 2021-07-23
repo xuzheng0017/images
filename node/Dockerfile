@@ -2,8 +2,7 @@ FROM node:12-alpine3.12
 
 ENV TZ="Asia/Shanghai"
 
-RUN echo "https://mirrors.aliyun.com/alpine/v3.12/main/" > /etc/apk/repositories \
-    && echo "https://mirrors.aliyun.com/alpine/v3.12/community/" >> /etc/apk/repositories \
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && npm config set registry https://registry.npm.taobao.org/ \
     && npm config set disturl https://npm.taobao.org/mirrors/node/ \
     && npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/ \
