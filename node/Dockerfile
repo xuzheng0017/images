@@ -1,4 +1,4 @@
-FROM node:12-alpine3.12
+FROM node:16-alpine
 
 ENV TZ="Asia/Shanghai"
 
