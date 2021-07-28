@@ -11,7 +11,8 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 	&& apk add --no-cache tzdata \
 	&& cp /usr/share/zoneinfo/${TZ} /etc/localtime \
 	&& echo ${TZ} > /etc/timezone \
-	&& apk del tzdata
+	&& apk del tzdata \
+	&& rm -f /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
