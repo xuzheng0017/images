@@ -1,9 +1,11 @@
 FROM nginx:1.20.1-alpine
 
-COPY nginx.conf /etc/nginx/nginx.conf
 COPY ssl/ /etc/nginx/ssl/
 COPY conf.d/ /etc/nginx/conf.d/
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY location.conf /etc/nginx/location.conf
 COPY proxy.conf /etc/nginx/proxy.conf
+COPY deny.conf /etc/nginx/deny.conf
 
 ENV TZ Asia/Shanghai
 
