@@ -14,7 +14,3 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 	&& cp /usr/share/zoneinfo/${TZ} /etc/localtime \
 	&& echo ${TZ} > /etc/timezone \
 	&& apk del tzdata
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
