@@ -1,8 +1,8 @@
 FROM nginx:1.20.1-alpine
 
 COPY ssl/ /etc/nginx/ssl/
-COPY conf.d/ /etc/nginx/conf.d/
 COPY nginx.conf /etc/nginx/nginx.conf
+COPY nginx_vhosts.conf /etc/nginx/nginx_vhosts.conf
 COPY location.conf /etc/nginx/location.conf
 COPY proxy.conf /etc/nginx/proxy.conf
 COPY deny.conf /etc/nginx/deny.conf
