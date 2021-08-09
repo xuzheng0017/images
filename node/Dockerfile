@@ -1,6 +1,6 @@
 FROM node:16-alpine
 
-ENV TZ="Asia/Shanghai"
+ENV TZ Asia/Shanghai
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && npm config set registry https://registry.npm.taobao.org/ \
@@ -13,5 +13,4 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
     && npm config set python_mirror https://npm.taobao.org/mirrors/python/ \
     && apk add --no-cache tzdata \
     && cp /usr/share/zoneinfo/${TZ} /etc/localtime \
-    && echo ${TZ} > /etc/timezone \
-    && apk del tzdata
+    && echo ${TZ} > /etc/timezone

@@ -1,6 +1,6 @@
 FROM centos:7.9.2009
 
-ENV TZ "Asia/Shanghai"
+ENV TZ Asia/Shanghai
 
 RUN ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
 	&& echo ${TZ} > /etc/timezone \
