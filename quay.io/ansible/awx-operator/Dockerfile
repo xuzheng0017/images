@@ -1,0 +1,1 @@
+FROM quay.io/ansible/awx-operator:0.16.1
