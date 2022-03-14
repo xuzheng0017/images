@@ -1,1 +1,1 @@
-FROM gcr.io/kubecost1/cost-model
+FROM gcr.io/kubecost1/cost-model:prod-1.90.1

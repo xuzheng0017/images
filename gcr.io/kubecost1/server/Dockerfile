@@ -1,1 +1,1 @@
-FROM gcr.io/kubecost1/server
+FROM gcr.io/kubecost1/server:prod-1.90.1
