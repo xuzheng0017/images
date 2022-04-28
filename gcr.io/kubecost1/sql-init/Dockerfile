@@ -1,1 +1,1 @@
-FROM gcr.io/kubecost1/sql-init:prod-1.91.2
+FROM gcr.io/kubecost1/sql-init:prod-1.91.1
