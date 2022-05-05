@@ -1,1 +1,1 @@
-FROM gcr.io/kubecost1/cluster-controller:v0.0.5
+FROM gcr.io/kubecost1/cluster-controller:v0.0.2

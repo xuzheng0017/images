@@ -1,1 +1,1 @@
-FROM gcr.io/kubecost1/kubecost-network-costs:v16.0
+FROM gcr.io/kubecost1/kubecost-network-costs:v15.7

@@ -1,1 +1,1 @@
-FROM gcr.io/kubecost1/frontend:prod-1.92.0
+FROM gcr.io/kubecost1/frontend:prod-1.89.2
